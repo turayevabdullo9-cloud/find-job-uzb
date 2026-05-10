@@ -1,0 +1,58 @@
+{
+  "admins": [
+    {
+      "email": "admin@jobsearch.com",
+      "password": "admin123",
+      "id": "-SgFQVnamGc"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Senior Frontend Engineer",
+      "company": "TechCorp",
+      "location": "San Francisco, CA",
+      "salary": "$120,000 - $160,000",
+      "category": "Technology",
+      "type": "Full-time",
+      "description": "We are looking for an experienced Frontend Engineer to join our growing team. You will work on modern web applications using React and TypeScript.",
+      "requirements": "React, TypeScript, 5+ years experience, Node.js",
+      "postedAt": "Apr 25, 2026"
+    },
+    {
+      "id": "2",
+      "title": "UX/UI Designer",
+      "company": "Design Studio",
+      "location": "New York, NY",
+      "salary": "$90,000 - $120,000",
+      "category": "Design",
+      "type": "Full-time",
+      "description": "Create delightful product experiences through polished UI and strong UX thinking. Work with product teams to build design systems.",
+      "requirements": "Figma, User Research, Prototyping, Visual Design",
+      "postedAt": "Apr 22, 2026"
+    },
+    {
+      "id": "3",
+      "title": "Digital Marketing Manager",
+      "company": "MarketingPro",
+      "location": "Los Angeles, CA",
+      "salary": "$95,000 - $130,000",
+      "category": "Marketing",
+      "type": "Full-time",
+      "description": "Lead digital campaigns across channels and improve conversion rates for clients. You will own performance marketing and campaign analytics.",
+      "requirements": "SEO, Google Ads, Analytics, Campaign Strategy",
+      "postedAt": "Apr 20, 2026"
+    }
+  ],
+  "applications": [
+    {
+      "id": "1",
+      "name": "Nozim",
+      "email": "kozim@gmail.com",
+      "jobId": 1,
+      "job": "Senior Frontend Engineer - TechCorp",
+      "date": "Apr 30, 2026, 08:51 AM",
+      "message": "I would love to join your team and help build polished interface experiences."
+    }
+  ]
+}
