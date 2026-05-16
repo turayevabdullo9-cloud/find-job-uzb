@@ -134,7 +134,7 @@ const BrowseAllJobs = () => {
                             ))}
 
                             {filteredJobs.length === 0 && (
-                                <div className="rounded-2xl border border-slate-200 bg-white p-8 text-center text-slate-600">
+                                <div className="rounded-3xl border border-slate-200 bg-white p-8 text-center text-slate-600">
                                   
                                       hech narsa topilmadi
                                 </div>
