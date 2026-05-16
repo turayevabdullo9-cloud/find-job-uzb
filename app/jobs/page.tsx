@@ -40,26 +40,26 @@ const BrowseAllJobs = () => {
     }, [jobs, search, category]);
 
     return (
-        <div className="min-h-screen bg-slate-50 py-10">
+        <div className="min-h-screen bg-gray-200 py-10">
             <div className="mx-auto w-full max-w-7xl px-6">
-                <div className="mb-10 flex flex-col gap-4 rounded-3xl bg-white p-8 shadow-lg sm:flex-row sm:items-center sm:justify-between">
+                <div className="mb-10 flex flex-col gap-4 rounded-3xl bg-gray-500 p-8 shadow-lg sm:flex-row sm:items-center sm:justify-between">
                     <div>
-                        <h1 className="text-4xl font-bold text-slate-950">Find Your Next Opportunity</h1>
-                        <p className="mt-3 text-sm text-slate-500">Explore our curated list of job openings and find the perfect match for your career.</p>
+                        <h1 className="text-4xl font-bold text-white">Find Your Next Opportunity</h1>
+                        <p className="mt-3 text-sm text-white">Explore our curated list of job openings and find the perfect match for your career.</p>
                     </div>
                     <div className="flex flex-wrap items-center gap-3">
                         <Link href="/" className="inline-flex h-12 items-center rounded-full border border-slate-200 bg-white px-5 text-sm font-semibold text-slate-800 transition hover:bg-slate-100">
                             Back Home
                         </Link>
-                        <Link href="/admin" className="inline-flex h-12 items-center rounded-full bg-blue-900 px-5 text-sm font-semibold text-white transition hover:bg-blue-800">
+                        <Link href="/admin" className="inline-flex h-12 items-center rounded-full bg-gray-700 px-5 text-sm font-semibold text-white transition hover:bg-gray-600">
                             Post a Job
                         </Link>
                     </div>
                 </div>
 
                 <div className="grid gap-8 lg:grid-cols-[300px_1fr]">
-                    <aside className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                        <h2 className="mb-6 text-xl font-semibold text-slate-950">Filter Jobs</h2>
+                    <aside className="rounded-3xl  bg-gray-400  p-6 shadow-2xl">
+                        <h2 className="mb-6 text-xl font-semibold text-white">Filter Jobs</h2>
                         <div className="space-y-6">
                             <div>
                                 <label className="mb-2 block text-sm font-medium text-slate-700">Search by keyword</label>
@@ -106,12 +106,12 @@ const BrowseAllJobs = () => {
 
                         <div className="space-y-6">
                             {filteredJobs.map((job) => (
-                                <div key={job.id} className="overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <div key={job.id} className="overflow-hidden rounded-3xl  bg-gray-500  p-6 shadow-2xl">
                                     <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-start">
                                         <div className="max-w-3xl">
-                                            <h3 className="text-2xl font-semibold text-slate-950">{job.title}</h3>
-                                            <p className="mt-1 text-sm text-slate-500">{job.company}</p>
-                                            <p className="mt-4 text-sm leading-7 text-slate-600">{job.description}</p>
+                                            <h3 className="text-2xl font-semibold text-white">{job.title}</h3>
+                                            <p className="mt-1 text-sm text-shadow-white">{job.company}</p>
+                                            <p className="mt-4 text-sm leading-7 text-white">{job.description}</p>
 
                                             <div className="mt-4 flex flex-wrap gap-2">
                                                 <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">{job.category}</span>
@@ -120,7 +120,7 @@ const BrowseAllJobs = () => {
                                             </div>
                                         </div>
                                         <div className="flex min-w-40 flex-col gap-3 text-right md:text-left">
-                                            <div className="text-sm text-slate-500">Salary</div>
+                                            <div className="text-sm text-white">Salary</div>
                                             <div className="text-base font-semibold text-slate-900">{job.salary}</div>
                                             <Link
                                                 href={`/jobs/${job.id}`}
@@ -135,7 +135,7 @@ const BrowseAllJobs = () => {
 
                             {filteredJobs.length === 0 && (
                                 <div className="rounded-3xl border border-slate-200 bg-white p-8 text-center text-slate-600">
-                                    Ничего не найдено. Попробуйте изменить фильтры.
+                                    hech narsa topilmadi
                                 </div>
                             )}
                         </div>

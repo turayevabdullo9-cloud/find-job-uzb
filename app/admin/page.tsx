@@ -92,7 +92,6 @@ const AdminContent = () => {
                 setLoginError("Invalid email or password");
             }
         } catch {
-            // Fallback to db.json
             const admin = db.admins.find((a: any) => a.email === email && a.password === password);
             if (admin) {
                 setIsAuthenticated(true);
@@ -182,58 +181,68 @@ const AdminContent = () => {
 
     if (!isAuthenticated) {
         return (
-            <div className="min-h-screen bg-slate-50 flex items-center justify-center px-4 py-10">
-                <div className="w-full max-w-md rounded-3xl bg-white p-8 shadow-lg">
-                    <h1 className="text-3xl font-bold text-slate-950 mb-2">Admin Login</h1>
-                    <p className="text-sm text-slate-500 mb-8">Enter your credentials to access the admin dashboard</p>
+          <div className="min-h-screen bg-gray-250 flex items-center justify-center px-4 py-10">
+            <div className="w-full max-w-md rounded-3xl bg-white p-8 shadow-lg">
+              <h1 className="text-3xl font-bold text-slate-950 mb-2">
+                Admin Login
+              </h1>
+              <p className="text-sm text-slate-500 mb-8">
+                Enter your credentials to access the admin dashboard
+              </p>
 
-                    <form onSubmit={handleLogin} className="space-y-5">
-                        <div>
-                            <label className="mb-2 block text-sm font-medium text-slate-700">Email</label>
-                            <input
-                                type="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="admin@jobsearch.com"
-                                className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-blue-500"
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label className="mb-2 block text-sm font-medium text-slate-700">Password</label>
-                            <input
-                                type="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder="••••••••"
-                                className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-blue-500"
-                                required
-                            />
-                        </div>
-                        {loginError && <p className="text-sm text-red-600">{loginError}</p>}
-                        <button
-                            type="submit"
-                            className="w-full rounded-2xl bg-blue-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
-                        >
-                            Login
-                        </button>
-                    </form>
-
-                    <div className="mt-6 rounded-2xl bg-slate-50 p-4 text-xs text-slate-600">
-                        <p className="font-semibold mb-2">Demo Credentials:</p>
-                        <p>Email: admin@jobsearch.com</p>
-                        <p>Password: admin123</p>
-                    </div>
+              <form onSubmit={handleLogin} className="space-y-5">
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-slate-700">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="admin@jobsearch.com"
+                    className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-blue-500"
+                    required
+                  />
                 </div>
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-slate-700">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="••••••••"
+                    className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-blue-500"
+                    required
+                  />
+                </div>
+                {loginError && (
+                  <p className="text-sm text-red-600">{loginError}</p>
+                )}
+                <button
+                  type="submit"
+                  className="w-full rounded-2xl bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-gray-800"
+                >
+                  Login
+                </button>
+              </form>
+
+              <div className="mt-6 rounded-2xl bg-slate-50 p-4 text-xs text-slate-600">
+                <p className="font-semibold mb-2">Demo Credentials:</p>
+                <p>Email: admin@abdullo.com</p>
+                <p>Password: abdullo123</p>
+              </div>
             </div>
+          </div>
         );
     }
 
     return (
         <div className="min-h-screen bg-slate-50">
             <div className="border-b border-slate-200 bg-white shadow-sm">
-                <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-                    <h1 className="text-2xl font-bold text-slate-950">Admin Dashboard</h1>
+                <div className="mx-auto  flex max-w-300 rounded-2xl items-center  justify-between px-6 py-4">
+                    <h1 className="text-2xl font-bold text-black">Admin Dashboard</h1>
                     <button
                         onClick={handleLogout}
                         className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
@@ -248,7 +257,7 @@ const AdminContent = () => {
                     <button
                         onClick={() => setActiveTab("applications")}
                         className={`px-4 py-3 text-sm font-semibold transition ${activeTab === "applications"
-                            ? "border-b-2 border-blue-900 text-blue-900"
+                            ? "border-b-2 border-gray-800 text-gray-800"
                             : "text-slate-600 hover:text-slate-900"
                             }`}
                     >
@@ -257,7 +266,7 @@ const AdminContent = () => {
                     <button
                         onClick={() => setActiveTab("jobs")}
                         className={`px-4 py-3 text-sm font-semibold transition ${activeTab === "jobs"
-                            ? "border-b-2 border-blue-900 text-blue-900"
+                            ? "border-b-2 border-gray-800 text-gray-800"
                             : "text-slate-600 hover:text-slate-900"
                             }`}
                     >
@@ -316,7 +325,7 @@ const AdminContent = () => {
                     <div className="space-y-6">
                         <button
                             onClick={() => setShowNewJobForm(!showNewJobForm)}
-                            className="rounded-2xl bg-blue-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+                            className="rounded-2xl bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-gray-800"
                         >
                             {showNewJobForm ? "Cancel" : "+ Post New Job"}
                         </button>
@@ -450,7 +459,7 @@ const AdminContent = () => {
                                     {jobFormError && <p className="text-sm text-red-600">{jobFormError}</p>}
                                     <button
                                         type="submit"
-                                        className="w-full rounded-2xl bg-blue-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+                                        className="w-full rounded-2xl bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-gray-800"
                                     >
                                         Post Job
                                     </button>

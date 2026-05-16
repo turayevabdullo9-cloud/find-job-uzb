@@ -42,7 +42,7 @@ const JobDetailsPage = () => {
         setError("");
 
         if (!job) {
-            setError("Не удалось найти вакансию.");
+            setError("Bo'sh ish o'rni topilmadi.");
             return;
         }
 
@@ -66,7 +66,9 @@ const JobDetailsPage = () => {
             setIsOpen(false);
             router.push("/admin?tab=applications");
         } catch {
-            setError("Ошибка отправки заявки. Повторите попытку.");
+            setError(
+              "So‘rov yuborishda xatolik yuz berdi. Iltimos, qayta urinib koʻring."
+            );
         }
     };
 
@@ -80,11 +82,11 @@ const JobDetailsPage = () => {
 
     if (!job) {
         return (
-            <div className="min-h-screen bg-slate-50 py-20">
-                <div className="container mx-auto px-6 text-center text-slate-700">
-                    Вакансия не найдена.
-                </div>
+          <div className="min-h-screen bg-slate-50 py-20">
+            <div className="container mx-auto px-6 text-center text-slate-700">
+              Vakansiya topilmadi.
             </div>
+          </div>
         );
     }
 

@@ -1,6 +1,6 @@
 const About = () => {
     return (
-        <div className="px-4 py-8 bg-[#0e3778] w-full mt-40">
+        <div className="px-4 py-8 bg-gray-800 w-full mt-40">
             <h1 className="text-center text-white text-5xl font-bold mt-20">Trusted by Job Seekers Worldwide</h1>
             <p className="text-center text-[#e7ebf2] text-lg mt-4">Our platform has helped thousands of professionals find their ideal career <br /> opportunities.</p>
             <div className="text-center mt-8 flex justify-around">

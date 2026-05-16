@@ -1,9 +1,12 @@
 {
   "admins": [
     {
-      "email": "admin@jobsearch.com",
-      "password": "admin123",
+      "email": "admin@abdullo.com",
+      "password": "abdullo123",
       "id": "-SgFQVnamGc"
+    },
+    {
+      "id": "d410"
     }
   ],
   "jobs": [
@@ -44,15 +47,6 @@
       "postedAt": "Apr 20, 2026"
     }
   ],
-  "applications": [
-    {
-      "id": "1",
-      "name": "Nozim",
-      "email": "kozim@gmail.com",
-      "jobId": 1,
-      "job": "Senior Frontend Engineer - TechCorp",
-      "date": "Apr 30, 2026, 08:51 AM",
-      "message": "I would love to join your team and help build polished interface experiences."
-    }
-  ]
+  "applications": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }
