@@ -5,7 +5,7 @@ const About = () => {
             <p className="text-center text-[#e7ebf2] text-lg mt-4">Our platform has helped thousands of professionals find their ideal career <br /> opportunities.</p>
             <div className="text-center mt-8 flex justify-around">
                 <div>
-                    <span className="text-4xl font-bold text-white inline-block hover:scale-125 transition-transform duration-300">500+</span>
+                    <span className="text-4xl  text-white inline-block hover:scale-125 transition-transform duration-300">500+</span>
                     <p className="text-[#e7ebf2] text-lg mt-2">Active Job listings</p>
                 </div>
                 <div>
